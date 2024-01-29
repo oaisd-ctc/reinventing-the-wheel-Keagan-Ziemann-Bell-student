@@ -1,1 +1,49 @@
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-7f7980b617ed060a017424585567c406b6ee15c891e84e1186181d67ecf80aa0.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=13598763)
+This package consists of three static classes: StringUtilities, ArrayUtilites, and MathUtilities. 
+They were designed to apply to logic specifically when working with strings, arrays, and math. Pre-written methods to make your life easier.
+
+
+Detailed List of Functions found below >>>
+
+-----------------------------
+StringUtilities.cs - 
+
+
+(description)
+
+(Method 1):
+
+(Method 2):
+
+(Method 3):
+
+...
+
+-----------------------------
+ArrayUtilities.cs - 
+
+
+(description)
+
+(Method 1):
+
+(Method 2):
+
+(Method 3):
+
+...
+
+-----------------------------
+MathUtilites.cs - 
+
+
+(description)
+
+(Method 1):
+
+(Method 2):
+
+(Method 3):
+
+...
+
+-----------------------------
