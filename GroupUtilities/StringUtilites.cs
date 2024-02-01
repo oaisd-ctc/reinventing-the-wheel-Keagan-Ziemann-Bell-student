@@ -7,6 +7,11 @@ namespace GroupUtilities
     {
 
 
+        /// <summary>
+        /// Converts all characters in a given string to it's Uppercase form
+        /// </summary>
+        /// <param name="s">A string that will be converted to Uppercase and returned</param>
+        /// <returns>Uppercase form of string 's'</returns>
         public static string ToUpper(string s)
         {
             string upperString = "";
@@ -14,20 +19,33 @@ namespace GroupUtilities
             foreach (char c in s)
             {
                 byte CharInAscii = (byte)c;
-                if (CharInAscii <= 90)
+                if (CharInAscii >= 65 && CharInAscii <= 90 || CharInAscii >= 97 && CharInAscii <= 122)
+                {
+                    if (CharInAscii <= 90)
+                    {
+                        upperString += c;
+                        continue;
+                    }
+                    CharInAscii -= 32;
+                    char upperChar = (char)CharInAscii;
+
+                    upperString += upperChar;
+                }
+                else
                 {
                     upperString += c;
-                    continue;
                 }
-                CharInAscii -= 32;
-                char upperChar = (char)CharInAscii;
-
-                upperString += upperChar;
             }
 
             return upperString;
         }
 
+
+        /// <summary>
+        /// Converts all characters in a given string to it's Lowercase form
+        /// </summary>
+        /// <param name="s">A string that will be converted to Lowercase and returned</param>
+        /// <returns>Lowercase form of string 's'</returns>
         public static string ToLower(string s)
         {
             string lowerString = "";
@@ -35,20 +53,33 @@ namespace GroupUtilities
             foreach (char c in s)
             {
                 byte CharInAscii = (byte)c;
-                if (CharInAscii > 90)
+                if (CharInAscii >= 65 && CharInAscii <= 90 || CharInAscii >= 97 && CharInAscii <= 122)
+                {
+                    if (CharInAscii > 90)
+                    {
+                        lowerString += c;
+                        continue;
+                    }
+                    CharInAscii += 32;
+                    char lowerChar = (char)CharInAscii;
+
+                    lowerString += lowerChar;
+                }
+                else
                 {
                     lowerString += c;
-                    continue;
                 }
-                CharInAscii += 32;
-                char lowerChar = (char)CharInAscii;
-
-                lowerString += lowerChar;
             }
 
             return lowerString;
         }
 
+
+        /// <summary>
+        /// Counts the amount of characters within a string
+        /// </summary>
+        /// <param name="s">A string whose length is counted and returned</param>
+        /// <returns>The length of string 's'</returns>
         public static int Length(string s)
         {
             int letters = 0;
@@ -61,6 +92,12 @@ namespace GroupUtilities
             return letters;
         }
 
+
+        /// <summary>
+        /// Reverses the order characters appear in a given string
+        /// </summary>
+        /// <param name="s">A string that is reversed and returned</param>
+        /// <returns>String 's' in reverse</returns>
         public static string Reverse(string s)
         {
             char[] array = new char[Length(s)];
@@ -80,45 +117,78 @@ namespace GroupUtilities
             return reversedString;
         }
 
+
+        /// <summary>
+        /// Counts the number of Vowels in a given string
+        /// </summary>
+        /// <param name="s">A string whose Vowels will be counted and returned</param>
+        /// <returns>The amount of Vowels within string 's'</returns>
         public static int CountVowels(string s)
         {
             char[] vowel = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'];
-            int numberOfVowels = 0;
+            int numOfVowels = 0;
 
-            foreach (char letter in s)
+            foreach (char c in s)
             {
-                for (int i = 0; i < 10; i++)
+                byte asciiNum = (byte)c;
+                if (asciiNum >= 65 && asciiNum <= 90 || asciiNum >= 97 && asciiNum <= 122)
                 {
-                    if (letter == vowel[i])
+                    for (int i = 0; i < 10; i++)
                     {
-                        numberOfVowels++;
+                        if (c == vowel[i])
+                        {
+                            numOfVowels++;
+                        }
                     }
                 }
             }
 
-            return numberOfVowels;
+            return numOfVowels;
         }
 
+
+        /// <summary>
+        /// Counts the number of Consonants in a given string
+        /// </summary>
+        /// <param name="s">A string whose Consonants will be counted and returned</param>
+        /// <returns>The amount of Consonants within string 's'</returns>
         public static int CountConsonants(string s)
         {
             char[] vowel = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'];
-            int numberOfVowels = 0;
-            bool match = false;
+            int numOfVowels = 0;
+            int notLetters = 0;
 
-            foreach (char letter in s)
+            foreach (char c in s)
             {
-                for (int i = 0; i < 10; i++)
+                byte asciiNum = (byte)c;
+                if (asciiNum >= 65 && asciiNum <= 90 || asciiNum >= 97 && asciiNum <= 122)
                 {
-                    if (letter == vowel[i])
+                    for (int i = 0; i < 10; i++)
                     {
-                        numberOfVowels++;
+                        if (c == vowel[i])
+                        {
+                            numOfVowels++;
+                            break;
+                        }
                     }
+                }
+                else
+                {
+                    notLetters++;
                 }
             }
 
-            return Length(s) - numberOfVowels;
+            int numOfLetters = Length(s) - notLetters;
+            return numOfLetters - numOfVowels;
         }
 
+
+        /// <summary>
+        /// Runs through the given string to verify if there is the given char within the string
+        /// </summary>
+        /// <param name="s">A string who is verified of having the given char</param>
+        /// <param name="letter">A char that is searched for within the given string</param>
+        /// <returns>A boolean of whether char 'letter' is within string 's'</returns>
         public static bool HasLetter(string s, char letter)
         {
             bool hasLetter = false;
@@ -134,5 +204,38 @@ namespace GroupUtilities
 
             return hasLetter;
         }
+
+
+        /// <summary>
+        /// Finds and removes any null spaces within a given string
+        /// </summary>
+        /// <param name="s">A string to search and remove null spaces from</param>
+        /// <returns>String 's' with no null spaces</returns>
+        public static string RemoveNullSpace(string s)
+        {
+            string finalString = "";
+
+            foreach (char c in s)
+            {
+                if (c != ' ')
+                {
+                    finalString += c;
+                }
+            }
+
+            return finalString;
+        }
+
+
+        /// <summary>
+        /// Adds '.' at the end of a given string
+        /// </summary>
+        /// <param name="s">A string to add '.' to</param>
+        /// <returns>String 's' with '.' added at the end of the string</returns>
+        public static string AddPunctuation(string s)
+        {
+            return s += ".";
+        }
+
     }
 }
