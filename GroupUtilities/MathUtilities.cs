@@ -104,6 +104,18 @@ namespace GroupUtilities
             }
             return total;
         }
+        public static int MultiStepAll(int v, int w, int x, int y, int z)
+        {
+            return v + w - x / y * z;
+        }
+        public static int MultiStepAddSubtract(int x, int y, int z)
+        {
+            return x + y - z;
+        }
+        public static int MultiStepDivideMultiply(int x, int y, int z)
+        {
+            return x / y * z;
+        }
         public static double Add(double x, double y)
         {
             return x + y;
@@ -159,6 +171,18 @@ namespace GroupUtilities
             }
             return total;
         }
+        public static double MultiStepAll(double v, double w, double x, double y, double z)
+        {
+            return v + w - x / y * z;
+        }
+        public static double MultiStepAddSubtract(double x, double y, double z)
+        {
+            return x + y - z;
+        }
+        public static double MultiStepDivideMultiply(double x, double y, double z)
+        {
+            return x / y * z;
+        }
         public static float Add(float x, float y)
         {
             return x + y;
@@ -213,6 +237,18 @@ namespace GroupUtilities
                 total = total * Base;
             }
             return total;
+        }
+        public static float MultiStepAll(float v, float w, float x, float y, float z)
+        {
+            return v + w - x / y * z;
+        }
+        public static float MultiStepAddSubtract(float x, float y, float z)
+        {
+            return x + y - z;
+        }
+        public static float MultiStepDivideMultiply(float x, float y, float z)
+        {
+            return x / y * z;
         }
     }
 }
