@@ -183,7 +183,7 @@ namespace GroupUtilities {
             }
             }
             return array;
-
+        }
         /// <summary>
         /// Sorts the double array in an descending fashion.  
         /// </summary>
@@ -192,7 +192,7 @@ namespace GroupUtilities {
         /// A descendingly sorted array.  
         /// </returns>
 
-        }
+        
         public static double[] SortDescending(double[] array) {
             int amount = 0;
             foreach (double num in array) {
