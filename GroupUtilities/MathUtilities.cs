@@ -159,5 +159,60 @@ namespace GroupUtilities
             }
             return total;
         }
+        public static float Add(float x, float y)
+        {
+            return x + y;
+        }
+        public static float Subtract(float x, float y)
+        {
+            return x - y;
+        }
+        public static float Divide(float x, float y)
+        {
+            return x / y;
+        }
+        public static float Multiply(float x, float y)
+        {
+            return x * y;
+        }
+        public static float Min(float x, float y)
+        {
+            float Min = 0;
+            if (x < y)
+            {
+                Min = x;
+            }
+            else
+            {
+                Min = y;
+            }
+            return Min;
+        }
+        public static float Max(float x, float y)
+        {
+            float Max = 0;
+            if (x > y)
+            {
+                Max = x;
+            }
+            else
+            {
+                Max = y;
+            }
+            return Max;
+        }
+        public static float AbsoluteValue(float x)
+        {
+            return -x;
+        }
+        public static float Power(float Base, float Power)
+        {
+            float total = Base;
+            for (float n = 2; n <= Power; n++)
+            {
+                total = total * Base;
+            }
+            return total;
+        }
     }
 }
