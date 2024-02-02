@@ -8,6 +8,7 @@
     <Nullable>enable</Nullable>
     <GenerateProgramFile>false</GenerateProgramFile>
     <IsPackable>true</IsPackable>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -21,6 +22,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <None Include="ReadMeHolder\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>

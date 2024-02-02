@@ -2,7 +2,7 @@
 
 ###### This package consists of three static classes: StringUtilities, ArrayUtilites, and MathUtilities. 
 ###### They were designed to apply to logic specifically when working with strings, arrays, and math. Pre-written methods to make your coding life easier.
-<br>
+
 
 *Detailed List of Functions found below >>>*
 
@@ -11,7 +11,7 @@
 
 
 A static class of functions relating to the manipulating and searching of strings.
-<br><br><br>
+
 
 
 ### (ToUpper): This method will take in 1 string as a parameter and return a string in the argument's uppercase form. 
@@ -42,7 +42,7 @@ public static string ToUpper(string s)
             }
         }
 ```
-<br>
+
 
 
 ### (ToLower): This method will take in 1 string as a parameter and return a string in the argument's lowercase form. 
@@ -75,7 +75,7 @@ public static string ToLower(string s)
             return lowerString;
         }
 ```
-<br>
+
 
 
 ### (Length): This method will take in 1 string as a parameter and return an int regarding the number of characters within the given string.
@@ -92,7 +92,7 @@ public static int Length(string s)
             return letters;
         }
 ```
-<br>
+
 
 
 ### (Reverse): This method will take in 1 string as a parameter and return a string that is the given string in reverse.
@@ -116,7 +116,7 @@ public static string Reverse(string s)
             return reversedString;
         }
 ```
-<br>
+
 
 
 ### (CountVowels): This method will take in 1 string as a parameter and return an int that holds the number of vowels in the given string parameter.
@@ -144,7 +144,7 @@ public static int CountVowels(string s)
             return numOfVowels;
         }
 ```
-<br>
+
 
 
 ### (CountConsonants): This method will take in 1 string as a parameter and return an int that holds the number of consonants in the given string parameter.
@@ -176,7 +176,7 @@ public static int CountConsonants(string s)
             }
         }
 ```
-<br>
+
 
 
 ### (HasLetter): This method will take in 1 string and 1 char as parameters and return a bool that returns true if the given char was found in the given string, and false otherwise.
@@ -197,7 +197,7 @@ public static bool HasLetter(string s, char letter)
             return hasLetter;
         }
 ```
-<br>
+
 
 
 ### (RemoveNullSpace): This method will take in 1 string and return that given string without any spaces between the characters.
@@ -217,7 +217,7 @@ public static string RemoveNullSpace(string s)
             return finalString;
         }
 ```
-<br>
+
 
 
 ### (AddPunctuation): This method will take 1 string and return the string with a period on the end of it.
@@ -227,7 +227,7 @@ public static string AddPunctuation(string s)
             return s += ".";
         }
 ```
-<br>
+
 
 -----------------------------
 ArrayUtilities.cs - 
@@ -236,7 +236,7 @@ ArrayUtilities.cs -
 (description): This package contains a multitude of functions that either find something or alter something about/from an array.  This can vary from adding every number an array up or sorting them in some way.  Every function included has one overload that uses double inputs/results while the orignals use integer inputs/results
 
 (Method 1 Average): This function finds the average of an array by finding the sum and then dividing it by the total, Ex. 8, 2, 7, 4, 5, 6 would return 5.  .  
-=======
+
 ``` Csharp
 public static int Average(int[] array) {
             int total = 0;
