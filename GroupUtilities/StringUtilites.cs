@@ -122,7 +122,7 @@ namespace GroupUtilities
         /// Counts the number of Vowels in a given string
         /// </summary>
         /// <param name="s">A string whose Vowels will be counted and returned</param>
-        /// <returns>The amount of Vowels within string 's'</returns>
+        /// <returns>The number of Vowels within string 's'</returns>
         public static int CountVowels(string s)
         {
             char[] vowel = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'];
@@ -151,7 +151,7 @@ namespace GroupUtilities
         /// Counts the number of Consonants in a given string
         /// </summary>
         /// <param name="s">A string whose Consonants will be counted and returned</param>
-        /// <returns>The amount of Consonants within string 's'</returns>
+        /// <returns>The number of Consonants within string 's'</returns>
         public static int CountConsonants(string s)
         {
             char[] vowel = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'];
