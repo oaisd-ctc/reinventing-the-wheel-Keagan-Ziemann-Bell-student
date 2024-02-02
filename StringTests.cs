@@ -1,7 +1,7 @@
 using Xunit;
 using GroupUtilities;
 
-public class Test
+public class StringTests
 {
 
 

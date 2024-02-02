@@ -1,6 +1,6 @@
 using GroupUtilities;
 using Xunit;
-public class Test
+public class MathTests
 {
     [Fact]
     public void TestRun()

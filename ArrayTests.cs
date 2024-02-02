@@ -1,7 +1,7 @@
 using Xunit;
 using GroupUtilities;
 
-public class Tests {
+public class ArrayTests {
 
     [Fact]
 
