@@ -9,6 +9,7 @@
     <GenerateProgramFile>false</GenerateProgramFile>
     <IsPackable>true</IsPackable>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup>
