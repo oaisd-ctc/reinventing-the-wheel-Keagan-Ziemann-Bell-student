@@ -79,4 +79,12 @@ public class StringTests
         Assert.Equal(desiredOutcome, StringUtilities.AddPunctuation(testString));
     }
 
+    [Fact]
+    public void RemoveNumbersStringTestCase()
+    {
+        string testString = "1hello112!";
+        string desiredOutcome = "hello!";
+        Assert.Equal(desiredOutcome, StringUtilities.RemoveNumbers(testString));
+    }
+
 }

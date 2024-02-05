@@ -237,5 +237,27 @@ namespace GroupUtilities
             return s += ".";
         }
 
+        /// <summary>
+        /// Removes all numbers from a given string
+        /// </summary>
+        /// <param name="s">A string that numbers are removed from</param>
+        /// <returns>String 's' without any numbers</returns>
+        public static string RemoveNumbers(string s)
+        {
+            string finalString = "";
+
+            foreach (char c in s)
+            {
+                byte charInAscii = (byte)c;
+                if (charInAscii >= 48 && charInAscii <= 57) { }
+                else
+                {
+                    finalString += c;
+                }
+            }
+
+            return finalString;
+        }
+
     }
 }

@@ -228,6 +228,26 @@ public static string AddPunctuation(string s)
         }
 ```
 
+### (RemoveNumbers): This method will take 1 string and return the string without any numbers within it.
+``` Csharp
+public static string RemoveNumbers(string s)
+        {
+            string finalString = "";
+
+            foreach (char c in s)
+            {
+                byte charInAscii = (byte)c;
+                if (charInAscii >= 48 && charInAscii <= 57) { }
+                else
+                {
+                    finalString += c;
+                }
+            }
+
+            return finalString;
+        }
+```
+
 
 -----------------------------
 ArrayUtilities.cs - 
