@@ -18,16 +18,16 @@ namespace GroupUtilities
 
             foreach (char c in s)
             {
-                byte CharInAscii = (byte)c;
-                if (CharInAscii >= 65 && CharInAscii <= 90 || CharInAscii >= 97 && CharInAscii <= 122)
+                byte charInAscii = (byte)c;
+                if (charInAscii >= 65 && charInAscii <= 90 || charInAscii >= 97 && charInAscii <= 122)
                 {
-                    if (CharInAscii <= 90)
+                    if (charInAscii <= 90)
                     {
                         upperString += c;
                         continue;
                     }
-                    CharInAscii -= 32;
-                    char upperChar = (char)CharInAscii;
+                    charInAscii -= 32;
+                    char upperChar = (char)charInAscii;
 
                     upperString += upperChar;
                 }
@@ -52,16 +52,16 @@ namespace GroupUtilities
 
             foreach (char c in s)
             {
-                byte CharInAscii = (byte)c;
-                if (CharInAscii >= 65 && CharInAscii <= 90 || CharInAscii >= 97 && CharInAscii <= 122)
+                byte charInAscii = (byte)c;
+                if (charInAscii >= 65 && charInAscii <= 90 || charInAscii >= 97 && charInAscii <= 122)
                 {
-                    if (CharInAscii > 90)
+                    if (charInAscii > 90)
                     {
                         lowerString += c;
                         continue;
                     }
-                    CharInAscii += 32;
-                    char lowerChar = (char)CharInAscii;
+                    charInAscii += 32;
+                    char lowerChar = (char)charInAscii;
 
                     lowerString += lowerChar;
                 }
@@ -138,6 +138,7 @@ namespace GroupUtilities
                         if (c == vowel[i])
                         {
                             numOfVowels++;
+                            break;
                         }
                     }
                 }
@@ -235,6 +236,29 @@ namespace GroupUtilities
         public static string AddPunctuation(string s)
         {
             return s += ".";
+        }
+
+
+        /// <summary>
+        /// Removes all numbers from a given string
+        /// </summary>
+        /// <param name="s">A string that numbers are removed from</param>
+        /// <returns>String 's' without any numbers</returns>
+        public static string RemoveNumbers(string s)
+        {
+            string finalString = "";
+
+            foreach (char c in s)
+            {
+                byte charInAscii = (byte)c;
+                if (charInAscii >= 48 && charInAscii <= 57) { }
+                else
+                {
+                    finalString += c;
+                }
+            }
+
+            return finalString;
         }
 
     }

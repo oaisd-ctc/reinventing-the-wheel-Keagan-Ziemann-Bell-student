@@ -37,7 +37,7 @@ public class Test
         string desiredOutcome = "!haow";
         Assert.Equal(desiredOutcome, StringUtilities.Reverse(testString));
     }
-    
+
     [Fact]
     public void CountVowelsStringTestCase()
     {
@@ -77,6 +77,14 @@ public class Test
         string testString = "hello";
         string desiredOutcome = "hello.";
         Assert.Equal(desiredOutcome, StringUtilities.AddPunctuation(testString));
+    }
+
+    [Fact]
+    public void RemoveNumbersStringTestCase()
+    {
+        string testString = "1hello112!";
+        string desiredOutcome = "hello!";
+        Assert.Equal(desiredOutcome, StringUtilities.RemoveNumbers(testString));
     }
 
 }
